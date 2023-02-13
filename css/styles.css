@@ -20,7 +20,8 @@ body main {
     width: 130px;
     height: 300px;
     border: 2px solid black;
-    border-radius: 8px; }
+    border-radius: 8px;
+    background-color: #fff; }
     body main .cajaComercios .logo {
       width: 120px;
       height: 120px;
@@ -52,24 +53,34 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center; }
+  align-items: center;
+  background-image: url("/imgs/bg-1.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; }
+  body header {
+    margin-top: 60px; }
   body hr {
     width: 5px;
     background-color: black; }
-  body nav .utilidades {
-    margin-top: 80px;
+  body nav .utilidades .contBotones {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
-    justify-content: center; }
-    body nav .utilidades button {
-      width: 130px;
-      height: 80px;
-      border-radius: 8px; }
-      body nav .utilidades button:hover {
-        background-color: #5cd071;
-        font-size: 1.2rem;
-        border-radius: 17px; }
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    border-radius: 8px;
+    background-color: #9999; }
+    body nav .utilidades .contBotones button {
+      border: none;
+      font-size: 1.1rem;
+      padding: 5px;
+      width: fit-content;
+      font-style: italic; }
+      body nav .utilidades .contBotones button:hover {
+        color: aliceblue;
+        border-radius: 10px;
+        background-color: #9e3c8f; }
   body footer {
     color: #fff;
     background-color: #000;

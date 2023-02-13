@@ -1,5 +1,5 @@
 /* cSpell:Disable */
-class comercio {
+class tipoServicio {
     constructor (id,categoria,logo,nombre,direccion,horario,actividad){
         this.id = Number(id);
         this.categoria = categoria.toUpperCase();

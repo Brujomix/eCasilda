@@ -9,47 +9,85 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
     <!-- Css Nativo -->
     <link rel="stylesheet" href="css/styles.css">
-    <title>eCasilda</title>
+    <title>e.Casilda</title>
 </head>
 <body>
     <header>
-        
+        <h1>Ecommers Casilda</h1>
     </header>
     <menu>
         <div>
             <nav class="navbar navbar-dark bg-dark fixed-top">
                 <div class="container-fluid">
-                  <a class="navbar-brand" href="#">eCasilda</a>
+                  <a class="navbar-brand" href="#">e.Casilda</a>
                   <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                     <span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="offcanvas offcanvas-end text-bg-dark" tabindex="-1" id="offcanvasDarkNavbar" aria-labelledby="offcanvasDarkNavbarLabel">
                     <div class="offcanvas-header">
-                      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Dark offcanvas</h5>
+                      <h5 class="offcanvas-title" id="offcanvasDarkNavbarLabel">Menu</h5>
                       <button type="button" class="btn-close btn-close-white" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                     </div>
                     <div class="offcanvas-body">
                       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
-                        <li class="nav-item">
-                          <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <li class="nav-item text-center">
+                          <span class="d-block">Registrate y mejora aun mas tu experiencia</span>
+                          <button class="p-1">Inicia Session</button>
+                          <div>
+                            <b>¿No tenes una cuenta?</b>
+                            <a href="">Registrate</a>
+                          </div>
+                          <hr style="border: .5px solid rgb(255, 255, 255); min-width: 100%; opacity: 50%;">
                         </li>
                         <li class="nav-item">
-                          <a class="nav-link" href="#">Link</a>
+                          <div class="accordion" id="accordionExample">
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingOne">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                                  Objetivos de la Aplicacion
+                                </button>
+                              </h2>
+                              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sed eveniet quod id reprehenderit accusantium, maiores similique quia commodi eius nam necessitatibus. Fugiat, ducimus consequuntur deleniti unde dolorem tempore numquam?</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingTwo">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                  Ventajas de Participar
+                                </button>
+                              </h2>
+                              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sed eveniet quod id reprehenderit accusantium, maiores similique quia commodi eius nam necessitatibus. Fugiat, ducimus consequuntur deleniti unde dolorem tempore numquam?</p>
+                                </div>
+                              </div>
+                            </div>
+                            <div class="accordion-item">
+                              <h2 class="accordion-header" id="headingThree">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                  Sobre Nosotros
+                                </button>
+                              </h2>
+                              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                                <div class="accordion-body">
+                                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis sed eveniet quod id reprehenderit accusantium, maiores similique quia commodi eius nam necessitatibus. Fugiat, ducimus consequuntur deleniti unde dolorem tempore numquam?</p>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          
+                          
                         </li>
-                        <li class="nav-item dropdown">
-                          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Dropdown
-                          </a>
-                          <ul class="dropdown-menu dropdown-menu-dark">
-                            <li><a class="dropdown-item" href="#">Action</a></li>
-                            <li><a class="dropdown-item" href="#">Another action</a></li>
-                            <li>
-                              <hr class="dropdown-divider">
-                            </li>
-                            <li><a class="dropdown-item" href="#">Something else here</a></li>
-                          </ul>
-                        </li>
+                        <hr style="border: .5px solid rgb(255, 255, 255); min-width: 100%; opacity: 50%;">
                       </ul>
+                      <div>
+                        <p>
+                          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero unde quae odit explicabo et nostrum, sit laudantium eos incidunt, aperiam obcaecati esse nisi molestiae doloremque animi. Ducimus, corporis numquam?
+                        </p>
+                      </div>
                       <form class="d-flex mt-3" role="search">
                         <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
                         <button class="btn btn-success" type="submit">Search</button>
@@ -59,24 +97,54 @@
                 </div>
               </nav>
         </div>
+        
     </menu>
     <nav>
         <div class="utilidades">
-            <button id="btnNegocios">Negocios</button>
-            <button id="btnTiendas">Tiendas</button>
-            <button id="btnFarmacias">Farmacias</button>
-            <button id="btnKioscos">Kioscos</button>
-            <button id="btnVeterinarias">Veterinarias</button>
-            <button id="btnRotiserias">Rotiserias</button>
-            <button id="btnServiciosP">Oficios</button>
+          <div class="accordion vw-100 p-1" id="accordionExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Comercios
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                <div class="accordion-body contBotones">
+                  <button id="btnTiendas">Tiendas</button>
+                  <button id="btnFarmacias">Farmacias</button>
+                  <button id="btnVerdulerias">Verdulerias</button>
+                  <button id="btnPanaderias">Panardarias</button>
+                  <button id="btnCarnicerias">Carnicerias</button>
+                  <button id="btnFerreterias">Ferreterias</button>
+                  <button id="btnPolirubros">Polirubros</button>
+                  <button id="btnJugueterias">Jugueterias</button>
+                  <button id="btnKioscosAlmacenes">Kioscos y Almacenes</button>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Oficios
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                <div class="accordion-body contBotones">
+                  <button id="btnElectricidad">Electricidad</button>
+                  <button id="btnPlomeria">Plomeria</button>
+                  <button id="btnAlbanileria">Albañileria</button>
+                  <button id="btnServiciosVarios">Servicios Varios</button>
+                  <button id="btnAlarmasCamaras">Alarmas y Camaras</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
     </nav>
-    <hr style="border: .5px solid black; min-width: 100%; opacity: 30%;">
     <main id="contComercios">
-        
+        <!-- Contenido Provisto por Archivo JS -->
     </main>
     <footer> 
-        <hr style="border: .5px solid black; min-width: 100%; opacity: 30%;">
         <div class="cajaFooter">
             Footer
         </div>
@@ -85,11 +153,15 @@
 
 <!-- Enlace CDN Boostrap v5.3.0 -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<!-- Enlace a Acciones del menu -->
-<script src="js/accionesMenu.js"></script>
-<!-- Enlace a Constructor de Comercios -->
-<script src="js/comercio.js"></script>
-<!-- Main js APP -->
+<!-- Enlace Acciones de Botones -->
+<script src="js/accionesBotones.js"></script>
+<!-- Enlace a Constructor de Objetos -->
+<script src="js/tiposServicio.js"></script>
+<!-- Enlace a Lista de Comercios -->
+<script src="js/listasComercio.js"></script>
+<!-- Enlace a Lista de Oficios -->
+<script src="js/listaOficio.js"></script>
+<!-- Enlace a Main -->
 <script src="js/main.js"></script>
 
 </html>
