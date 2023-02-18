@@ -1,0 +1,6 @@
+[
+    {"id":1,"nombre":"Comercio 1","logo":"imgs/bts.png","categoria":"comercio","direccion":"direccion 123456","horario":"8 a 12","contacto":12345678,"descripcion":"actividad que desarrolla"},
+    {"id":2,"nombre":"Comercio 2","logo":"logo","categoria":"servicio","direccion":"direccion 987654","horario":"8 a 16","contacto":12345678,"descripcion":"actividad que desarrolla"},
+    {"id":2,"nombre":"Comercio 3","logo":"logo","categoria":"servicio","direccion":"direccion 987654","horario":"8 a 16","contacto":12345678,"descripcion":"actividad que desarrolla"},
+    {"id":2,"nombre":"Comercio 4","logo":"logo","categoria":"servicio","direccion":"direccion 987654","horario":"8 a 16","contacto":12345678,"descripcion":"actividad que desarrolla"}
+]

@@ -99,49 +99,12 @@
         </div>
         
     </menu>
-    <nav>
-        <div class="utilidades">
-          <div class="accordion vw-100 p-1" id="accordionExample">
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingOne">
-                <button class="accordion-button bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                  Comercios
-                </button>
-              </h2>
-              <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                <div class="accordion-body contBotones">
-                  <button id="btnTiendas">Tiendas</button>
-                  <button id="btnFarmacias">Farmacias</button>
-                  <button id="btnVerdulerias">Verdulerias</button>
-                  <button id="btnPanaderias">Panardarias</button>
-                  <button id="btnCarnicerias">Carnicerias</button>
-                  <button id="btnFerreterias">Ferreterias</button>
-                  <button id="btnPolirubros">Polirubros</button>
-                  <button id="btnJugueterias">Jugueterias</button>
-                  <button id="btnKioscosAlmacenes">Kioscos y Almacenes</button>
-                </div>
-              </div>
-            </div>
-            <div class="accordion-item">
-              <h2 class="accordion-header" id="headingTwo">
-                <button class="accordion-button collapsed bg-secondary text-light" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                  Oficios
-                </button>
-              </h2>
-              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                <div class="accordion-body contBotones">
-                  <button id="btnElectricidad">Electricidad</button>
-                  <button id="btnPlomeria">Plomeria</button>
-                  <button id="btnAlbanileria">Albañileria</button>
-                  <button id="btnServiciosVarios">Servicios Varios</button>
-                  <button id="btnAlarmasCamaras">Alarmas y Camaras</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
+    <nav class="d-flex gap-3 align-items-center">
+        <h2>Buscar</h2>
+        <input id="inBusqueda" class="p-2" type="text" placeholder="Ingrese Busqueda">
     </nav>
-    <main id="contComercios">
+    <hr style="min-width: 100%; height: 4px;">
+    <main id="contActividades">
         <!-- Contenido Provisto por Archivo JS -->
     </main>
     <footer> 
@@ -155,12 +118,8 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
 <!-- Enlace Acciones de Botones -->
 <script src="js/accionesBotones.js"></script>
-<!-- Enlace a Constructor de Objetos -->
-<script src="js/tiposServicio.js"></script>
-<!-- Enlace a Lista de Comercios -->
-<script src="js/listasComercio.js"></script>
-<!-- Enlace a Lista de Oficios -->
-<script src="js/listaOficio.js"></script>
+<!-- Enlace Objeto -->
+<script src="js/clase.js"></script>
 <!-- Enlace a Main -->
 <script src="js/main.js"></script>
 

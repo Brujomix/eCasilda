@@ -1,16 +1,12 @@
 *{padding: 0;margin: 0;box-sizing: border-box;};
 
-@import "utilidades/comercios.scss";
+@import "utilidades/comerciosCard.scss";
 
 body{
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-image: url("/imgs/bg-1.png");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
     header{
         margin-top: 60px;
     }
