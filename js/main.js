@@ -1,24 +1,26 @@
 /* c.Spell:Disable */
-//Get DataBase
 let actividades = [
-    {id:1,nombre:"Comercio 1",logo:"imgs/bts.png",categoria:"comercio",direccion:"direccion 123456",horario:"8 a 12",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."},
-    {id:2,nombre:"Comercio 2",logo:"imgs/Halal.png",categoria:"servicio",direccion:"direccion 987654",horario:"8 a 16",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."},
-    {id:2,nombre:"Comercio 2",logo:"imgs/macStore.png",categoria:"servicio",direccion:"direccion 987654",horario:"8 a 16",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."},
-    {id:2,nombre:"Comercio 2",logo:"imgs/roseChampagne.png",categoria:"servicio",direccion:"direccion 987654",horario:"8 a 16",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."}
+    {nombre:"Comercio 1",logo:"imgs/bts.png",categoria:"Servicio",direccion:"direccion 123456",horario:"8 a 12",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."},
+    {nombre:"Comercio 2",logo:"imgs/Halal.png",categoria:"Comercio",direccion:"direccion 987654",horario:"8 a 16",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."},
+    {nombre:"Comercio 3",logo:"imgs/macStore.png",categoria:"Servicio",direccion:"direccion 987654",horario:"8 a 16",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."},
+    {nombre:"Comercio 4",logo:"imgs/roseChampagne.png",categoria:"Servicio",direccion:"direccion 987654",horario:"8 a 16",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."}
 ];
 
-
+//Get DataBase
+//let actividades;
 const getDB = async()=>{
     const respuesta = await
     fetch("data/actividades.json")
-    const data = await respuesta.json();
+    let data = await respuesta.json();
     actividades = data;
+    console.log(data);
     console.log(actividades);
 }
-//getDB();
+
+localStorage.setItem("actividades", JSON.stringify(actividades));
 
 //Deconstruccion del Objeto Comercio
-let { id, nombre, logo, categoria, direccion, horario, contacto, descripcion } = actividad;
+let {nombre, logo, categoria, direccion, horario, contacto, descripcion } = actividad;
 
 //Agregando objetos al DOM
 function insertarDom(arr) {

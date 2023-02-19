@@ -1,8 +1,7 @@
 //c.Spell:Disable
 //Construccion del objeto Negocio
 class actividad {
-    constructor (id,nombre,logo,categoria,direccion,horario,contacto,descripcion){
-        this.id = Number(id);
+    constructor (nombre,logo,categoria,direccion,horario,contacto,descripcion){
         this.nombre = nombre.toUpperCase();
         this.logo = logo;
         this.categoria = categoria;

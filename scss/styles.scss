@@ -10,36 +10,6 @@ body{
     header{
         margin-top: 60px;
     }
-    hr{
-        width: 5px;
-        background-color: black;
-    }
-    nav{
-        .utilidades{
-            
-            .contBotones{
-                display: flex;
-                flex-wrap: wrap;
-                justify-content: center;
-                align-items: center;
-                gap: 8px;
-                border-radius: 8px;
-                background-color: #9999; 
-                button{
-                    border: none;
-                    font-size: 1.1rem;
-                    padding: 5px;
-                    width: fit-content;
-                    font-style: italic;
-                    &:hover{
-                        color: aliceblue;
-                        border-radius: 10px;
-                        background-color: #9e3c8f;
-                    }
-                }       
-            }
-        }
-    }
 
     footer{
         color: #fff;

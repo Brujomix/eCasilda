@@ -5,8 +5,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--Enlace CSS Boostrap v5.3.0-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <!--Enlace CDN CSS Boostrap v5.3.0-->
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous"> -->
+    <!--Enlace NPM CSS Boostrap v5.3.0-->
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
     <!-- Css Nativo -->
     <link rel="stylesheet" href="css/styles.css">
     <title>e.Casilda</title>
@@ -31,12 +33,8 @@
                     <div class="offcanvas-body">
                       <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                         <li class="nav-item text-center">
-                          <span class="d-block">Registrate y mejora aun mas tu experiencia</span>
-                          <button class="p-1">Inicia Session</button>
-                          <div>
-                            <b>¿No tenes una cuenta?</b>
-                            <a href="">Registrate</a>
-                          </div>
+                          <h1 class="p-1">Ecommers Casilda</h1>                      
+                          <button id="participar" class="btn btn-primary" data-bs-dismiss="offcanvas">Participar</button>
                           <hr style="border: .5px solid rgb(255, 255, 255); min-width: 100%; opacity: 50%;">
                         </li>
                         <li class="nav-item">
@@ -78,8 +76,6 @@
                               </div>
                             </div>
                           </div>
-                          
-                          
                         </li>
                         <hr style="border: .5px solid rgb(255, 255, 255); min-width: 100%; opacity: 50%;">
                       </ul>
@@ -88,10 +84,6 @@
                           Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nobis libero unde quae odit explicabo et nostrum, sit laudantium eos incidunt, aperiam obcaecati esse nisi molestiae doloremque animi. Ducimus, corporis numquam?
                         </p>
                       </div>
-                      <form class="d-flex mt-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-                        <button class="btn btn-success" type="submit">Search</button>
-                      </form>
                     </div>
                   </div>
                 </div>
@@ -104,9 +96,66 @@
         <input id="inBusqueda" class="p-2" type="text" placeholder="Ingrese Busqueda">
     </nav>
     <hr style="min-width: 100%; height: 4px;">
+    
     <main id="contActividades">
         <!-- Contenido Provisto por Archivo JS -->
-    </main>
+      </main>
+
+    <section>
+      <!-- Modal -->
+      <div class="modal fade" id="modalParticipar" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h1 class="modal-title fs-5" id="exampleModalLabel">Ingresa la Informacion</h1>
+              <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                <!-- nombre actividad -->
+                <div class="input-group mb-3">
+                  <span id="inNombre" class="input-group-text" >Nombre</span>
+                  <input type="text" class="form-control" placeholder="Nombre" aria-describedby="basic-addon1">
+                </div>
+                <!-- categoria -->
+                <div class="input-group mb-3">
+                  <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+                  <select id="inCategoria" class="form-select" >
+                    <option selected>Selecciona</option>
+                      <option value="1">Comercio</option>
+                      <option value="2">Servicio</option>
+                  </select>
+                </div>
+                <!-- logotipo -->
+                <div>
+                  <span>Carga Tu Logo</span>
+                </div>
+                <div class="input-group mb-3">
+                  <input id="inLogo" type="file" class="form-control" >
+                </div>
+                <!-- horarios -->
+                <div class="input-group mb-3">
+                  <input id="inHorarios" type="text" class="form-control" placeholder="Horarios" aria-describedby="basic-addon2">
+                  <span class="input-group-text">Horarios</span>
+                </div>
+                <!-- whatssapp -->
+                <div class="input-group mb-3">
+                  <input id="inWhatsapp" type="text" class="form-control" placeholder="Numero Whatsapp" aria-describedby="basic-addon2">
+                  <span class="input-group-text" >Whatssapp</span>
+                </div>
+                <!-- Descripcion -->
+                <div class="input-group">
+                  <textarea id="inDescripcion" class="form-control" placeholder="Describe tu actividad" aria-label="With textarea"></textarea>
+                </div>
+              </div>
+              <div class="modal-footer">
+                <button id="btnCerrar_Participar" type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button id="btnGuardar_Participar" type="button" class="btn btn-primary">Guardar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <footer> 
         <div class="cajaFooter">
             Footer
@@ -115,11 +164,15 @@
 </body>
 
 <!-- Enlace CDN Boostrap v5.3.0 -->
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
-<!-- Enlace Acciones de Botones -->
-<script src="js/accionesBotones.js"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
+<!-- Enlace Boostrap NPM -->
+<script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
 <!-- Enlace Objeto -->
 <script src="js/clase.js"></script>
+<!-- Enlace Acciones de Botones -->
+<script src="js/accionesBotones.js"></script>
+<!-- Enlace Funciones -->
+<script src="js/funciones.js"></script>
 <!-- Enlace a Main -->
 <script src="js/main.js"></script>
 
