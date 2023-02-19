@@ -1,73 +1,31 @@
 //cSpell:disabled
 body{
-    main{
-        display: flex;
-        flex-wrap: wrap;
-        gap: 10px;
-        padding: 9px;
-        justify-content: center;
-        align-items: center;
-        .cajaComercios{
-            display: grid;
-
-            grid-template-columns: .5fr 1fr;
-            grid-template-rows: auto;
-            
-            grid-template-areas: 
-            "logo informacion"
-            "descripcion informacion"
-            ;
-            
-            border: 2px solid black;
-            border-radius: 8px;
-            background-color: #fff;
-
-            max-width: 320px;
-            height: 220px;
-            padding: 5px;
-            .logo{
-                h1{
-                    font-size: 1.3rem;
-                }
-                grid-area: logo;
-                text-align: center;
-                padding: 8px;
-                img{
-                    max-width: 100%;
-                }
-
-            }
-            .informacion{
-                grid-area: informacion;
+    .cajaActividades{
+        padding: 10px;  
+        .lista{
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 30px;
+            .cajaComercios{
                 display: flex;
-                flex-wrap: nowrap;
                 flex-direction: column;
                 align-items: center;
-                gap: 9px;
-                span{
-                    font-style: italic;
-                    font-weight: bold;
+                h1{
+                    font-size: 1.5rem;
+                }
+                .informacionCards{
+                    padding: 5px;
+                    gap: 10px;
+                    border: 2px solid #000;
+                    border-radius: 10px;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
                 }
             }
-            .descripcion{
-                grid-area: descripcion;
-                text-align: center;
-                display: flex;
-                flex-wrap: nowrap;
-                justify-content: space-around;
-                align-items: center;
-                textarea{
-                    text-align: center;
-                    font-size: 85%;
-                }
-                button{
-                    padding: 4px;
-                    &:hover{
-                        background-color: rgb(92, 208, 113);
-                    border-radius: 8px;
-                    }
-                }
-            }      
         }
     }
 }

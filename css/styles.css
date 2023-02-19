@@ -3,57 +3,29 @@
   margin: 0;
   box-sizing: border-box; }
 
-body main {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 10px;
-  padding: 9px;
-  justify-content: center;
-  align-items: center; }
-  body main .cajaComercios {
-    display: grid;
-    grid-template-columns: .5fr 1fr;
-    grid-template-rows: auto;
-    grid-template-areas: "logo informacion" "descripcion informacion";
-    border: 2px solid black;
-    border-radius: 8px;
-    background-color: #fff;
-    max-width: 320px;
-    height: 220px;
-    padding: 5px; }
-    body main .cajaComercios .logo {
-      grid-area: logo;
-      text-align: center;
-      padding: 8px; }
-      body main .cajaComercios .logo h1 {
-        font-size: 1.3rem; }
-      body main .cajaComercios .logo img {
-        max-width: 100%; }
-    body main .cajaComercios .informacion {
-      grid-area: informacion;
+body .cajaActividades {
+  padding: 10px; }
+  body .cajaActividades .lista {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 30px; }
+    body .cajaActividades .lista .cajaComercios {
       display: flex;
-      flex-wrap: nowrap;
       flex-direction: column;
-      align-items: center;
-      gap: 9px; }
-      body main .cajaComercios .informacion span {
-        font-style: italic;
-        font-weight: bold; }
-    body main .cajaComercios .descripcion {
-      grid-area: descripcion;
-      text-align: center;
-      display: flex;
-      flex-wrap: nowrap;
-      justify-content: space-around;
       align-items: center; }
-      body main .cajaComercios .descripcion textarea {
-        text-align: center;
-        font-size: 85%; }
-      body main .cajaComercios .descripcion button {
-        padding: 4px; }
-        body main .cajaComercios .descripcion button:hover {
-          background-color: #5cd071;
-          border-radius: 8px; }
+      body .cajaActividades .lista .cajaComercios h1 {
+        font-size: 1.5rem; }
+      body .cajaActividades .lista .cajaComercios .informacionCards {
+        padding: 5px;
+        gap: 10px;
+        border: 2px solid #000;
+        border-radius: 10px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center; }
 
 body {
   display: flex;

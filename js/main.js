@@ -1,9 +1,14 @@
 /* c.Spell:Disable */
+//Carga lista Actividades
+window.addEventListener("load", _=>{
+    insertarDom(actividades);
+});
+
 let actividades = [
-    {nombre:"Comercio 1",logo:"imgs/bts.png",categoria:"Servicio",direccion:"direccion 123456",horario:"8 a 12",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."},
-    {nombre:"Comercio 2",logo:"imgs/Halal.png",categoria:"Comercio",direccion:"direccion 987654",horario:"8 a 16",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."},
-    {nombre:"Comercio 3",logo:"imgs/macStore.png",categoria:"Servicio",direccion:"direccion 987654",horario:"8 a 16",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."},
-    {nombre:"Comercio 4",logo:"imgs/roseChampagne.png",categoria:"Servicio",direccion:"direccion 987654",horario:"8 a 16",contacto:12345678,descripcion:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Consectetur perferendis corrupti illo quis dolores, nisi asperiores eaque qui modi facilis aut adipisci sequi, aspernatur architecto."}
+    {nombre:"BTS",logo:"imgs/bts.png",categoria:"Servicio",direccion:"Bv.O.Lagos 2056",horario:"8 a 12 - 16 a 20",contacto:12345678,descripcion:"Servicio de Venta de Inmuebles"},
+    {nombre:"Bar Halai",logo:"imgs/Halal.png",categoria:"Comercio",direccion:"Medoza 7654",horario:"7 a 00",contacto:12345678,descripcion:"Bar de comidas y tragos"},
+    {nombre:"Mc Store",logo:"imgs/macStore.png",categoria:"Servicio",direccion:"Bv.BsAs 1654",horario:"8 a 12 - 16 - 20",contacto:12345678,descripcion:"Servicio de Mac Store, Venta de Equipos Apple"},
+    {nombre:"Catering",logo:"imgs/roseChampagne.png",categoria:"Servicio",direccion:"Sarmiento 654",horario:"8 a 16",contacto:12345678,descripcion:"Servicio de Catering"}
 ];
 
 //Get DataBase
@@ -25,41 +30,46 @@ let {nombre, logo, categoria, direccion, horario, contacto, descripcion } = acti
 //Agregando objetos al DOM
 function insertarDom(arr) {
 
-    let contComercios = document.querySelector("#contActividades");
+    listaActividades = document.createElement("div");
+    listaActividades.setAttribute("class", "lista");
+    
     arr.forEach((e) => {
-        contComercios.innerHTML +=
-        `<div class="cajaComercios">
-            <div class="logo">
+        listaActividades.innerHTML +=
+        `
+        <div class="cajaComercios">
+            <div>
                 <h1>${e.nombre}</h1>
-                <img src="${e.logo}">  
             </div>
-            <div class="informacion">
+            <div class="informacionCards">
+                <img src="${e.logo}">  
                 <h2>${e.categoria}</h2>
                 <span>${e.direccion}</span>
                 <span>${e.horario}</span>
-                <span>${e.contacto}</span>
-                <div>
-                    <a href="https://web.whatsapp.com/" target="black" id="contactar">
-                        <img src="imgs/wsp-verde-3.png" style="width:37px">
-                    </a>
-                </div>
-            </div>
-            <div class="descripcion p-1">           
+                
                 <div class="dropdown">
-                    <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Descripcion
-                    </button>
+                    <img class="dropdown-toggle" data-bs-toggle="dropdown" src="imgs/wsp-verde-3.png" style="width:37px">
+                    <div class="p-2 dropdown-menu">
+                        <span class="invisible">${e.contacto}</span>
+                        <textarea id="mensajeWsp" placeholder="Envia un mensaje"></textarea>
+                        <button class="btn btn-success" id="btnEnviar">Enviar</button>
+                    </div>   
+                </div>
+
+                <div class="descripcion p-1">           
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        Actividad
+                        </button>
                         <ul class="dropdown-menu dropdown-menu-dark">
                             <p class="text-center scroll=true p-1">${e.descripcion}</p>
                         </ul>
-                </div>
+                    </div>
             </div>
-                
-        </div>
+        </div>      
         `
-    });   
+    });  
+    document.querySelector(".cajaActividades").appendChild(listaActividades)
 }
-insertarDom(actividades);
 
 //Limpieza del Contenedor MAIN
 let clearMain = _=> {
