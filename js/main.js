@@ -5,10 +5,10 @@ window.addEventListener("load", _=>{
 });
 
 let actividades = [
-    {nombre:"BTS",logo:"imgs/bts.png",categoria:"Servicio",direccion:"Bv.O.Lagos 2056",horario:"8 a 12 - 16 a 20",contacto:12345678,descripcion:"Servicio de Venta de Inmuebles"},
-    {nombre:"Bar Halai",logo:"imgs/Halal.png",categoria:"Comercio",direccion:"Medoza 7654",horario:"7 a 00",contacto:12345678,descripcion:"Bar de comidas y tragos"},
-    {nombre:"Mc Store",logo:"imgs/macStore.png",categoria:"Servicio",direccion:"Bv.BsAs 1654",horario:"8 a 12 - 16 - 20",contacto:12345678,descripcion:"Servicio de Mac Store, Venta de Equipos Apple"},
-    {nombre:"Catering",logo:"imgs/roseChampagne.png",categoria:"Servicio",direccion:"Sarmiento 654",horario:"8 a 16",contacto:12345678,descripcion:"Servicio de Catering"}
+    {nombre:"BTS",logo:"../imgs/bts.png",categoria:"Servicio",direccion:"Bv.O.Lagos 2056",horario:"8 a 12 - 16 a 20",contacto:12345678,descripcion:"Servicio de Venta de Inmuebles"},
+    {nombre:"Bar Halai",logo:"../imgs/Halal.png",categoria:"Comercio",direccion:"Medoza 7654",horario:"7 a 00",contacto:12345678,descripcion:"Bar de comidas y tragos"},
+    {nombre:"Mc Store",logo:"../imgs/macStore.png",categoria:"Servicio",direccion:"Bv.BsAs 1654",horario:"8 a 12 - 16 - 20",contacto:12345678,descripcion:"Servicio de Mac Store, Venta de Equipos Apple"},
+    {nombre:"Catering",logo:"../imgs/roseChampagne.png",categoria:"Servicio",direccion:"Sarmiento 654",horario:"8 a 16",contacto:12345678,descripcion:"Servicio de Catering"}
 ];
 
 //Get DataBase
@@ -47,7 +47,7 @@ function insertarDom(arr) {
                 <span>${e.horario}</span>
                 
                 <div class="dropdown">
-                    <img class="dropdown-toggle" data-bs-toggle="dropdown" src="imgs/wsp-verde-3.png" style="width:37px">
+                    <img class="dropdown-toggle" data-bs-toggle="dropdown" src="../imgs/wsp-verde-3.png" style="width:37px">
                     <div class="p-2 dropdown-menu">
                         <span class="invisible">${e.contacto}</span>
                         <textarea id="mensajeWsp" placeholder="Envia un mensaje"></textarea>

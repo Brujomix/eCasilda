@@ -12,11 +12,11 @@
     <!--Enlace NPM CSS Boostrap v5.3.0-->
     <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
     <!-- Css Nativo -->
-    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="../css/styles.css">
     <title>e.Casilda</title>
 </head>
 
-<body class="cuerpo-indice">
+<body class="cuerpo-buscador">
     <header>
         <h1>Ecommers Casilda</h1>
     </header>
@@ -24,7 +24,7 @@
         <div>
             <nav class="navbar navbar-dark bg-dark fixed-top">
                 <div class="container-fluid">
-                    <a class="navbar-brand" href="#">e.Casilda</a>
+                    <a class="navbar-brand" href="../index.html">e.Casilda</a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
                         data-bs-target="#offcanvasDarkNavbar" aria-controls="offcanvasDarkNavbar">
                         <span class="navbar-toggler-icon"></span>
@@ -40,6 +40,8 @@
                             <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
                                 <li class="nav-item text-center">
                                     <h1 class="p-1">Ecommers Casilda</h1>
+                                    <button id="participar" class="btn btn-primary"
+                                        data-bs-dismiss="offcanvas">Participar</button>
                                     <hr style="border: .5px solid rgb(255, 255, 255); min-width: 100%; opacity: 50%;">
                                 </li>
                                 <li class="nav-item">
@@ -116,34 +118,85 @@
         </div>
 
     </menu>
-    <nav>
-      <div class="contEnlaces">
-        <div class="enlacesPages1">
-          <a href="pages/buscador.html" target="_self">
-            <b>Comercios <br> y Servicios</b>
-            <img src="imgs/marco1.png" alt="">
-          </a>
-        </div>
-        <div class="enlacesPages2">
-          <a href="">
-            <b>Aca Texto</b>
-            <img src="imgs/marco1.png" alt="">
-          </a>
-        </div>
-        <div class="enlacesPages3">
-          <a href="">
-            <b>Aca Texto</b>
-            <img src="imgs/marco1.png" alt="">
-          </a>
-        </div>
-        <div class="enlacesPages4">
-          <a href="">
-            <b>Aca Texto</b>
-            <img src="imgs/marco1.png" alt="">
-          </a>
-        </div>
-      </div>
+    <nav class="d-flex flex-wrap gap-3 p-1 align-items-center">
+        <button id="iniciarBusqueda" class="btn btn-secondary">Buscar</button>
+        <input id="inBusqueda" class="p-2" type="text" placeholder="Ingrese Busqueda">
+        <button id="mostrarTodos" class="btn btn-secondary">Mostrar Todos</button>
     </nav>
+    <hr style="min-width: 100%; height: 4px;">
+
+    <main class="cajaActividades">
+
+        <!-- Contenido Provisto por Archivo JS -->
+
+    </main>
+
+    <section>
+        <!-- Modal -->
+        <div class="modal fade" id="modalParticipar" tabindex="-1" aria-labelledby="exampleModalLabel"
+            aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h1 class="modal-title fs-5" id="exampleModalLabel">Ingresa la Informacion</h1>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- nombre actividad -->
+                        <div class="input-group mb-3">
+                            <span class="input-group-text">Nombre</span>
+                            <input id="inNombre" type="text" class="form-control" placeholder="Nombre"
+                                aria-describedby="basic-addon1">
+                        </div>
+                        <!-- categoria -->
+                        <div class="input-group mb-3">
+                            <label class="input-group-text" for="inputGroupSelect01">Categoria</label>
+                            <select id="inCategoria" class="form-select">
+                                <option value="Comercio">Comercio</option>
+                                <option value="Servicio">Servicio</option>
+                            </select>
+                        </div>
+                        <!-- logotipo -->
+                        <div>
+                            <span>Carga Tu Logo</span>
+                        </div>
+                        <div class="input-group mb-3">
+                            <input id="inLogo" type="file" class="form-control">
+                        </div>
+                        <!-- horarios -->
+                        <div class="input-group mb-3">
+                            <input id="inHorario" type="text" class="form-control" placeholder="Horarios"
+                                aria-describedby="basic-addon2">
+                            <span class="input-group-text">Horarios</span>
+                        </div>
+                        <!-- direccion -->
+                        <div class="input-group mb-3">
+                            <input id="inDireccion" type="text" class="form-control" placeholder="Direccion"
+                                aria-describedby="basic-addon2">
+                            <span class="input-group-text">Direccion</span>
+                        </div>
+                        <!-- whatssapp -->
+                        <div class="input-group mb-3">
+                            <input id="inContacto" type="number" class="form-control" placeholder="Numero Whatsapp"
+                                aria-describedby="basic-addon2">
+                            <span class="input-group-text">Whatssapp</span>
+                        </div>
+                        <!-- Descripcion -->
+                        <div class="input-group">
+                            <textarea id="inDescripcion" class="form-control" placeholder="Describe tu actividad"
+                                aria-label="With textarea"></textarea>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button id="btnCerrar_Participar" type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Cerrar</button>
+                        <button id="btnGuardar_Participar" type="button" class="btn btn-primary"
+                            data-bs-dismiss="modal">Guardar</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
     <footer>
         <div class="cajaFooter">
@@ -158,5 +211,13 @@
     crossorigin="anonymous"></script>
 <!-- Enlace Boostrap NPM -->
 <!-- <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script> -->
+<!-- Enlace Objeto -->
+<script src="../js/clase.js"></script>
+<!-- Enlace Acciones de Botones -->
+<script src="../js/accionesBotones.js"></script>
+<!-- Enlace Funciones -->
+<script src="../js/funciones.js"></script>
+<!-- Enlace a Main -->
+<script src="../js/main.js"></script>
 
 </html>
